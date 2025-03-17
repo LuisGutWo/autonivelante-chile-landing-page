@@ -28,32 +28,34 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }) {
+export async function generateMetadata(context) {
+  const { params } = context;
   const response = await fetchMainProducts();
-  const products = response || [];
 
-  if (!Array.isArray(products)) {
+  if (!Array.isArray(response)) {
     console.error("SingleProduct: response.data is not an array", response);
     return { title: "Product not found" };
   }
 
-  const product = products.find((p) => p.id.toString() === params.id);
+  const { id } = await params;
+  const product = response.find((p) => p?.id?.toString() === id);
 
   if (!product) {
     console.error(
       "SingleProduct: product is null or undefined",
-      params.id,
-      products
+      params?.id,
+      response
     );
     return { title: "Product not found" };
   }
 
   return {
-    title: product.title,
+    title: product?.title ?? "Product not found",
   };
 }
 
-export default async function SingleProduct({ params }) {
+export default async function SingleProduct({ params = {} }) {
+  const { id: productId } = await params;
   const response = await fetchMainProducts();
   const products = response || [];
 
@@ -62,12 +64,12 @@ export default async function SingleProduct({ params }) {
     notFound();
   }
 
-  const product = products.find((p) => p.id.toString() === params.id);
+  const product = products.find((p) => p.id.toString() === productId);
 
   if (!product) {
     console.error(
       "SingleProduct: product is null or undefined",
-      params.id,
+      productId,
       products
     );
     notFound();
@@ -85,8 +87,8 @@ export default async function SingleProduct({ params }) {
           ]}
         />
         <Suspense fallback={<Preloader />}>
-          <MainCardDetail product={product} key={product.id} />
-          <CarouselComponent product={product} key={product.id} />
+          <MainCardDetail product={product} key={`main-${product.id}`} />
+          <CarouselComponent product={product} key={`carousel-${product.id}`} />
         </Suspense>
       </Container>
     </Layout>

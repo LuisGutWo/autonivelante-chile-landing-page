@@ -276,11 +276,11 @@ export default function Contact() {
                                     .map(
                                       (cartItem) =>
                                         `${cartItem.qty} - ${
-                                          cartItem.attributes?.title
+                                          cartItem.title
                                         } - (${formatPrice(
-                                          cartItem.attributes?.price
+                                          cartItem.price
                                         )}) = ${formatPrice(
-                                          cartItem.attributes?.price *
+                                          cartItem.price *
                                             cartItem?.qty
                                         )}`
                                     )
