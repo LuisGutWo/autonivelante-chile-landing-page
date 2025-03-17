@@ -34,7 +34,7 @@ export default async function HomeProducts() {
               <div className="products__card-container productcard__text">
                 <div className="products__card-box d-flex flex-row flex-wrap justify-content-center gap-4 align-items-center">
                   {products.map((product) => (
-                    <MainHomeCard key={`${product.id}-${id}`} product={product} />
+                    <MainHomeCard key={product.id} product={product} />
                   ))}
                 </div>
               </div>
