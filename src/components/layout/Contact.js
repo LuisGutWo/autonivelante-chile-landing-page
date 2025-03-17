@@ -113,11 +113,9 @@ export default function Contact() {
       .then(
         () => {
           toast.success(" enviado con exito!");
-          console.log("SUCCESS!");
         },
         (error) => {
           toast.error("Algo salio mal.");
-          console.log("FAILED...", error.text);
         }
       );
   };
@@ -280,8 +278,7 @@ export default function Contact() {
                                         } - (${formatPrice(
                                           cartItem.price
                                         )}) = ${formatPrice(
-                                          cartItem.price *
-                                            cartItem?.qty
+                                          cartItem.price * cartItem?.qty
                                         )}`
                                     )
                                     .join("\n")}
