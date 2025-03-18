@@ -79,7 +79,7 @@ export default async function SingleProduct({ params = {} }) {
 
   return (
     <Layout headerStyle={4} footerStyle={1}>
-      <Container className="mt_150 mb_200">
+      <Container className="breadcrumb_container">
         <Breadcrumb
           items={[
             { name: "Productos", href: "/products" },

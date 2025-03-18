@@ -1,5 +1,5 @@
 .mainfeat-section {
-  margin: 5rem 0 6rem 0;
+  margin: 5rem 0 2rem 0;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 5px;
 
@@ -26,6 +26,7 @@
 
 .content_block_two .content-box {
   display: block;
+  padding-bottom: 90px;
 }
 
 .content_block_two .content-box .sec-title p {
@@ -71,8 +72,12 @@
 /* main features main card */
 
 .featcard__text {
-  padding: 3rem 1rem 5rem 2.5rem;
+  padding: 1rem 1rem 1rem 2rem;
   text-align: left;
+  -webkit-text-size-adjust: 80%;
+  -webkit-text-size-adjust: 80%; /* For Safari */
+  -ms-text-size-adjust: 80%; /* For IE */
+  text-size-adjust: 80%; /* For other browsers */
   height: 100%;
   width: 100%;
   position: relative;
@@ -112,7 +117,7 @@
 }
 .featcard__content p {
   text-align: left;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   text-overflow: ellipsis;
   display: flex;
   flex-direction: row;

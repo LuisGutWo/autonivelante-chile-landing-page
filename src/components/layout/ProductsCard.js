@@ -29,7 +29,7 @@ export default function ProductsCard() {
   return (
     <section
       id="products"
-      className="products__card-section p_relative pt-3 centred sec-pad"
+      className="products__card-section sec-pad"
     >
       <Container fluid>
         <div className="products__card-container productcard__text">

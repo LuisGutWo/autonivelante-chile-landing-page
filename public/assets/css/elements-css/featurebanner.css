@@ -16,7 +16,8 @@
   display: block;
   overflow: hidden;
   border-radius: 5px;
-  width: min(80%, 70rem);
+  width: min(90%, 70rem);
+  padding: 0;
   left: 0;
   box-shadow: rgba(0, 0, 0, 0.203) 0px 25px 50px -12px;
 }

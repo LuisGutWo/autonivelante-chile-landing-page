@@ -8,8 +8,102 @@
   font-size: 0.7rem;
 }
 
+.products__card-container .outer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.main__card {
+  min-width: 18rem;
+  width: 100%;
+  min-height: 38rem;
+  height: 100%;
+  background-image: url(https://firebasestorage.googleapis.com/v0/b/login-huellitas.appspot.com/o/card-backgroun-shape.png?alt=media&token=224caadb-c4fa-47cd-9421-165c92b61671);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-style: none;
+  box-shadow: rgba(0, 0, 0, 0.168) 0px 5px 15px;
+
+  .main__card-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 95%;
+    max-width: 18rem;
+    height: 100%;
+
+    .card-img-top {
+      object-fit: contain;
+      width: 100%;
+      padding: 1.5rem;
+      height: 100%;
+    }
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 18rem;
+    width: 100%;
+    max-height: 8rem;
+    height: 100%;
+    padding-top: 2rem;
+
+    .card-title {
+      text-align: center;
+      font-size: 1.2rem;
+    }
+    .card-price {
+      font-size: 1.2rem;
+    }
+  }
+  .buttons__card {
+    margin: 1rem 0 1rem 0;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    width: 100%;
+    padding: 0 1rem;
+
+    a {
+      width: 100%;
+      text-decoration: none;
+      border-radius: 5px;
+      border-width: 2.5px;
+      font-size: 1rem;
+
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+  }
+}
+.main__card:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.01);
+  cursor: pointer;
+}
+
 .detailproducts__card-box {
-  margin-top: 4rem;
+  margin-top: 0;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -46,7 +140,7 @@
   padding: 2rem;
 
   .card-img-top {
-    margin: 3rem 0;
+    margin: 0;
     width: 30rem;
     height: 33rem;
     object-fit: contain;
@@ -118,86 +212,13 @@
 
 /* products__card-box comes from productsCard section */
 
-.products__card-maincontent {
-  .main__card {
-    min-width: 21rem;
-    width: 100%;
-    min-height: 38rem;
-    height: 100%;
-    background-image: url(https://firebasestorage.googleapis.com/v0/b/login-huellitas.appspot.com/o/card-backgroun-shape.png?alt=media&token=224caadb-c4fa-47cd-9421-165c92b61671);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: top;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    border-style: none;
-    box-shadow: rgba(0, 0, 0, 0.248) 0px 5px 15px;
-
-    .main__card-img-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-
-      .card-img-top {
-        object-fit: contain;
-        width: 15rem;
-        padding: 0;
-      }
-    }
-
-    .card-body {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 18rem;
-      width: 100%;
-      max-height: 10rem;
-      height: 100%;
-      padding-top: 2rem;
-
-      .card-title {
-        text-align: center;
-      }
-      .card-price {
-        font-size: 1.5rem;
-      }
-    }
-    .buttons__card {
-      margin: 2rem 0 1rem 0;
-      background-color: #fff;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 0.8rem;
-      width: 100%;
-      padding: 0 1rem;
-
-      a {
-        width: 100%;
-        text-decoration: none;
-        border-radius: 5px;
-        border-width: 2.5px;
-        font-size: 1rem;
-
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-      }
-    }
-  }
-  .main__card:hover {
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    transition: all 0.3s ease-in-out;
-    transform: scale(1.01);
-    cursor: pointer;
-  }
+.main__card:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.01);
+  cursor: pointer;
 }
 
 /* Carousel Styles */
@@ -213,6 +234,99 @@
   }
 }
 @media screen and (min-width: 769px) {
+  .products__card-container .outer-container {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    padding: 0 2rem;
+    margin-top: 2rem;
+
+    .main__card {
+      min-width: 18rem;
+      width: 100%;
+      min-height: 38rem;
+      height: 100%;
+      background-image: url(https://firebasestorage.googleapis.com/v0/b/login-huellitas.appspot.com/o/card-backgroun-shape.png?alt=media&token=224caadb-c4fa-47cd-9421-165c92b61671);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: top;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      border-style: none;
+      box-shadow: rgba(0, 0, 0, 0.168) 0px 5px 15px;
+
+      .main__card-img-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        width: 95%;
+        max-width: 18rem;
+        height: 100%;
+
+        .card-img-top {
+          object-fit: contain;
+          width: 100%;
+          padding: 1.5rem;
+          height: 100%;
+        }
+      }
+
+      .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 18rem;
+        width: 100%;
+        max-height: 8rem;
+        height: 100%;
+        padding-top: 2rem;
+
+        .card-title {
+          text-align: center;
+          font-size: 1.2rem;
+        }
+        .card-price {
+          font-size: 1.2rem;
+        }
+      }
+      .buttons__card {
+        margin: 1rem 0 1rem 0;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.8rem;
+        width: 100%;
+        padding: 0 1rem;
+
+        a {
+          width: 100%;
+          text-decoration: none;
+          border-radius: 5px;
+          border-width: 2.5px;
+          font-size: 1rem;
+
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+          align-items: center;
+        }
+      }
+    }
+    .main__card:hover {
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      transition: all 0.3s ease-in-out;
+      transform: scale(1.01);
+      cursor: pointer;
+    }
+  }
   .detailmain__img-box {
     justify-content: flex-start;
     padding: 0;
@@ -224,8 +338,12 @@
       object-fit: contain;
     }
   }
+  .detailproducts__card-box {
+    margin-top: 4rem;
+    height: 100%;
+  }
   .Breadcrumb_breadcrumb__2WlKU {
-    font-size: 100%;
+    font-size: 0.5rem;
   }
 
   .detailproducts__card-maincontent {

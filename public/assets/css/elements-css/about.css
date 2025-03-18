@@ -8,7 +8,7 @@
 }
 
 .about__main-column {
-  margin: 10rem 0 7rem 0;
+  margin: 10rem 0 1rem 0;
 }
 
 .image_block .image-box {
@@ -49,7 +49,7 @@
 }
 
 .aboutcard__text-inner {
-  padding: 4rem 3rem 0rem 3rem;
+  padding: 2.5rem 3rem 1.5rem 3rem;
 }
 
 .aboutcard__bar {
@@ -62,7 +62,6 @@
 }
 
 .aboutcard__buttons {
-  height: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -188,8 +187,7 @@
   }
   .about__main-column {
     width: 80%;
-    margin-top: 18rem;
-    margin-left: 7rem;
+    margin: 18rem 0 7rem 7rem;
   }
 
   .image_block .image-box {

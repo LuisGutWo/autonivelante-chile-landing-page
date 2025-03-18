@@ -52,7 +52,7 @@ export default function MainFeatures() {
           <div className="row clearfix">
             <div className="col-lg-12 col-md-12 col-sm-12 content-column p-0">
               <div className="content_block_two">
-                <div className="content-box p_relative ps-5">
+                <div className="content-box">
                   <div className="featcard__text">
                     <h1 className="featcard__title blue text-dark text-start fw-bold">
                       Características
